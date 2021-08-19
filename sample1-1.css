@@ -1,0 +1,43 @@
+/*<li>要素の黒点を取り除く*/
+li{
+    list-style: none;
+    float:left;
+  }
+
+body{
+    font-family:”Avenir Next”;
+  }
+
+/*class名には.をつける*/
+.header {
+    background-color: #f7f2b4;
+    height: 90px;
+  }
+
+.header-logo{
+    font-size:36px;
+    float:left;
+  }
+   
+.main {
+    background-color: #bdf7f1;
+    height: 600px;
+  }
+  
+.footer {
+    background-color: #ceccf3;
+    height: 270px;
+  }
+
+h1{
+    color:#ff0000;
+    font-size:40px;
+    background-color:#f3f372;
+    height:80px;
+    width:200px;
+}
+
+p{
+    color:#0000ff;
+    font-family:serif;
+}

@@ -1,12 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<!--headにはページの情報を書く。実際には表示されない-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--文字コードの指定-->
+    <meta charset="utf-8">
+    <!-- タイトルの指定 -->
+    <title>Practice</title>
+    <!--CSSの読み込み宣言-->
+    <link rel="stylesheet" href="sample1-1.css">
 </head>
+
+<!--bodyには実際に表示したい内容を書く-->
 <body>
-    <h1>hello</h1>
+<!--見出しをつける-->
+<h1>hello</h1>
+<h6>programming practice</h6>
+<!--段落を作成する-->
+<p>これはサンプルです</p>
+<!--divで要素をグループ化してレイアウトする-->
+<div class="header">
+    <div class="header-logo">Progate</div>
+    <div class="header-list">
+      <!--ulで囲むと黒点,olで囲むと数字の連番-->
+      <!--囲むこと＝入れ子。インデント(字下げ)をする-->
+    <ul>
+        <!--タグに名前をつける。複数の要素に同じclassを設定すると同じCSSが適用される-->
+        <li>プログラミングとは</li>
+        <li>学べるレッスン</li>
+        <li>お問い合わせ</li>
+      </ul>
+    </div>
+</div>
+
+<div class="main">
+  
+</div>
+<div class="footer">
+
+
+</div>
+
+<!--リンクを作成する-->
+<a herf="https://google.com">google</a>
+<!--画像を表示する-->
+<img src="url">
 </body>
 </html>
