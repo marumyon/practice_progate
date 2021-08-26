@@ -21,3 +21,4 @@ git commit -m '*コメント*'
 ↓
 git push origin main
 ローカルの変更点をリモートへ反映する
+※pushする前にリモートレポジトリを作っているか？確認

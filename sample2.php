@@ -7,7 +7,7 @@
 </head>
 <body>
   //htmlに埋め込むとき<?php～?>の中にphpのコードを書く
-<?php
+  <?php
     //echoは出力せよという命令
     echo "Hello, world!";
   ?>
@@ -22,14 +22,14 @@
     //割り算の余りも計算できる
     echo 8 % 3
   ?>
-  <br>
+   <br>
+   <?php
     //変数は$変数名=代入したい値;で定義
     //数字や日本語から始まったり、ローマ字読みはNG
     //英単語や、二単語以上は二つ目の単語の始まりを大文字にするとよい
-   <?php
     echo $fruit="りんご";
   ?>
-
+  <br>
    <?php
     $name = "にんじゃわんこ";
     // "こんにちは！"という文字列と$nameを連結してechoする
@@ -40,7 +40,7 @@
     $name1 = "こんにちは".$name1;
     echo $name1;
   ?>
-　
+　<br>
 　<?php
     $x = 99 * 99;
     $y = 77 * 77;
@@ -54,6 +54,7 @@
       echo "変数yは6000より大きいです。";
     }//実行されない   
   ?>
+  <br>
 　　<?php
     $age = 26;
     if ($age>=30) {
@@ -64,6 +65,7 @@
         echo "あなたは30歳未満です。";
       }
     ?>
+    <br>
     <?php
     $remainder=2;
     //switchはelseifと同じ使い方
@@ -84,6 +86,37 @@
         break;
     }
 ?>
+<br>
+<?php
+//だーよこの問題
+if($dyce === 1 || $dyce === 2){
+    echo $dyce . 'は凶です。';
+}else if ($dyce === 3 || $dyce === 4 || $dyce === 5){
+    echo $dyce . 'は中吉です。';
+}else{
+    echo $dyce . 'は大吉です。';
+}
+?>
+
+<?php
+//swith文に切り替え(～9/2)
+$dyce=rand(1,6);
+    switch ($dyce) {
+      case ($dyce === 1 || $dyce === 2):
+        echo $dyce . 'は凶です。';
+        break;
+      case ($dyce === 3 || $dyce === 4 || $dyce === 5):
+        echo $dyce . 'は中吉です。';
+        break;
+      default:
+        echo $dyce . 'は大吉です。';
+        break;
+     }
+?>
+
+
+
+
 
 </body>
 </html>
