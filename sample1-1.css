@@ -1,7 +1,6 @@
 /*<li>要素の黒点を取り除く*/
 li{
     list-style: none;
-    float:left;
   }
 
 body{
@@ -10,24 +9,103 @@ body{
 
 /*class名には.をつける*/
 .header {
-    background-color: #f7f2b4;
+    background-color: hsl(56, 81%, 84%);
     height: 90px;
   }
 
 .header-logo{
     font-size:36px;
     float:left;
+    padding:20px 40px;
   }
-   
-.main {
-    background-color: #bdf7f1;
-    height: 600px;
-  }
+ 
+.header-list li{
+    /*floatとleftで左から横並び*/
+    float: left;
+    /*paddingでborderの内側に余白をつける*/
+    padding: 33px 20px;
+  }  
   
-.footer {
-    background-color: #ceccf3;
-    height: 270px;
+
+.main {
+  padding: 100px 80px;
   }
+
+.copy-container h1 {
+    font-size: 140px;
+   }
+   
+.copy-container h2 {
+     font-size: 60px;
+   }
+
+.copy-container span {
+    color: #ff4a4a;
+  }   
+
+.contents{
+    height: 500px;
+    /*marginでborderの外側に余白をつける*/
+    margin-top: 100px;
+  } 
+
+.section-title{
+  /*borderだけで上下左右の枠線を引けるし、方向指定で下線を引ける*/
+    border-bottom: 2px solid #dee7ec;
+    font-size: 28px; 
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+  } 
+
+.contents-item{
+    float: left;
+    margin-right: 40px;
+  } 
+
+.contents-item p {
+    font-size: 24px;
+    margin-top: 30px;
+  }  
+
+.contact-form {
+    padding-top: 100px;
+  }
+
+/*,で区切ると複数の要素に同じCSSを適用できる*/  
+input,textarea {
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid #dee7ec;
+  }  
+
+.contact-submit{
+    background-color: #dee7ec;
+    color: #889eab;
+  }  
+
+.footer {
+    background-color: #2f51673;
+    color:#fff;
+    height: 120px;
+    padding:40px;
+  }
+
+.footer-logo{
+    font-size:32px;
+    float:left;
+  }  
+
+.footer-list{
+    float:right;
+  }  
+
+.footer-list li{
+ padding-bottom:20px; 
+}
+
 
 h1{
     color:#ff0000;
