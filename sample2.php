@@ -85,5 +85,33 @@
     }
 ?>
 
+<?php
+//だーよこの問題
+if($dyce === 1 || $dyce === 2){
+    echo $dyce . 'は凶です。';
+}else if ($dyce === 3 || $dyce === 4 || $dyce === 5){
+    echo $dyce . 'は中吉です。';
+}else{
+    echo $dyce . 'は大吉です。';
+}
+?>
+
+<?php
+//swith文に切り替え(～9/2)
+$dyce=rand(1,6);
+    switch ($dyce) {
+      case ($dyce === 1 || $dyce === 2):
+        echo $dyce . 'は凶です。';
+        break;
+      case ($dyce === 3 || $dyce === 4 || $dyce === 5):
+        echo $dyce . 'は中吉です。';
+        break;
+      default:
+        echo $dyce . 'は大吉です。';
+        break;
+     }
+?>
+
+
 </body>
 </html>
