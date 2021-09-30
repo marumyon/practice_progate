@@ -30,7 +30,7 @@
     <div class="form-item">名前</div>
     <!--テキストボックスの作り方-->
     <!--input type="text"-->
-    <!--name属性で入力された値を取得するときに使う名前をつける-->
+    <!--name属性で、入力された値を取得するときに使う名前をつける-->
     <!--inputタグは閉じタグ不要-->
     <input type="text" name="name">
 

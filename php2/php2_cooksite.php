@@ -16,6 +16,8 @@
 <body>
   <div class="menu-wrapper container">
     <h1 class="logo">Café Progate</h1>
+    <!--フォームを作成する-->
+    <form method="post" action="php2_cookconfirm.php">
     <div class="menu-items">
       <!--foreachをhtmlに埋め込む方法-->
       <!--endforeachを使用する-->
@@ -34,9 +36,19 @@
       <!--価格を表示する方法-->  
       <!--$menuのgetTaxIncludedPriceメソッドの戻り値を表示する-->
         <p class="price">¥<?php echo $menu -> getTaxIncludedPrice() ?>（税込）</p>
+      <!-- <input>タグを用いて入力ボックスを作成してください  -->
+      <!--value属性に初期値を設定することができる-->
+      <!--name属性に、$menuのゲッターを用いてnameプロパティを表示する-->
+      <input type="text" value="0" name="<?php echo $menu -> getName() ?>">  
+      <!-- $menuのゲッターを用いてorderCountプロパティを表示してください -->
+      <!-- <p>注文数: <?php echo $menu -> getOrderCount() ?></p>  -->
+        <span>個</span> 
     </div>
       <?php endforeach ?>
     </div>
+      <!-- <input>タグを用いて送信ボタンを作成してください  -->
+      <input type="submit" value="注文する">
   </div>
+    </form> 
 </body>
 </html>

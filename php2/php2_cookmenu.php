@@ -11,6 +11,8 @@ class Menu {
   private $price;
   //$imageというプロパティを定義する
   private $image;
+  //プロパティに初期値を設定することができる
+  private $orderCount = 0;
   
   public function __construct($name, $price, $image) {
      $this -> name = $name;
@@ -34,12 +36,33 @@ class Menu {
     return $this -> image;
   }
 
+  //getOrderCountメソッドを定義してください
+  public function getOrderCount() {
+    return $this->orderCount;
+}
+
+  //privateのとき、クラスの外から値を変更する方法
+  //プロパティの値を変更するためだけのメソッド(セッター)が必要
+  //public function set***()
+  //setプロパティ名が一般的
+  //setOrderCountメソッドを定義してください
+  public function setOrderCount($orderCount) {
+    $this->orderCount = $orderCount;
+}
+
   //メソッドを定義する
   //floor関数を使うと、小数点以下を切り捨てた値が得られる
   //returnとセットで使うと、戻り値として得られる
   public function getTaxIncludedPrice() {
     return floor($this -> price * 1.08);//税込価格
   }
+
+  // getTotalPriceメソッドを定義してください
+  public function getTotalPrice() {
+    return $this->getTaxIncludedPrice() * $this->orderCount ;
+  }
+
 }
+
 ?>
   

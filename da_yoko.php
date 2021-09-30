@@ -59,17 +59,6 @@ $scores2 = array(1, 2, 3, 4, 5, 6, 7, 8, 9) ;
      }
  }
 
-// $scores = array(1, 2, 3, 4, 5, 6, 7, 8, 9) ;
-// $score2 = 1 ;
-//    while ($score2 = 9) { $soreが9のとき永遠に実行されてしまうから×
-//      foreach ($scores as $score) {
-//      echo $score . '×' . $score2 . '=' . $score * $score2 ;
-//      echo '<br>';
-//      $score2++ ;
-//      }
-//    }
-// 
-
 // for($a = 1; $a <=9; $a++){
 //     for($i = 1; $i <= 9; $i++){
 //         $ans = $a * $i;
