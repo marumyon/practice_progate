@@ -11,6 +11,7 @@ $pasta = new Food('PASTA', 1200, 'https://s3-ap-northeast-1.amazonaws.com/progat
 
 $menus = array($juice, $coffee, $curry, $pasta);
 
+//userインスタンスを作成する
 $user1 = new User('suzuki', 'male');
 $user2 = new User('tanaka', 'female');
 $user3 = new User('suzuki', 'female');
@@ -18,7 +19,6 @@ $user4 = new User('sato', 'male');
 
 $users = array($user1, $user2, $user3, $user4);
 
-// 以下の$review1 ~ $review8を削除して、userIdプロパティをセットするためのコードを貼り付けてください
 $review1 = new Review($juice->getName(), $user1->getId(), '果肉たっぷりのオレンジジュースです！');
 $review2 = new Review($curry->getName(), $user1->getId(), '具がゴロゴロしていてとてもおいしいです');
 $review3 = new Review($coffee->getName(), $user2->getId(), '香りがいいです');

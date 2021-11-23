@@ -23,16 +23,29 @@ git push origin main
 ローカルの変更点をリモートへ反映する
 mainの部分はブランチ確認
 ※pushする前にリモートレポジトリを作っているか？確認
+※ブランチ名同じであれば省略可能
 
 リモートレポジトリの登録方法
 git remote add レポジトリ名　URL
 
 リモートレポジトリにあるファイルをダウンロード（pull）する方法
 git pull origin master
+pullできない？
+→branchの確認
+→変更点あれば取り込めない
+→stashでck
 
 add→commit→push→pullのサイクル
 
 git statusで変更ファイルを確認
+自分のファイル変更したら
+git stash
+↓
+git pull
+↓
+(git stash php)復活させて編集可能
+↓
+git push
 
 git diffで変更内容を確認
 

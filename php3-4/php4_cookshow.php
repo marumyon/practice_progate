@@ -2,8 +2,13 @@
 require_once('menu.php');
 require_once('data.php');
 
+//リンクの情報(クエリ情報)を受け取る
+//$_GET['キー名']
 $menuName = $_GET['name'];
+//Menuクラスに対してfindByNameというクラスメソッドを呼び出して
+//$menuに代入する
 $menu = Menu::findByName($menus, $menuName);
+//getReviewsメソッドを呼び出して$menuReviewsに代入する
 $menuReviews = $menu->getReviews($reviews);
 ?>
 
@@ -37,7 +42,10 @@ $menuReviews = $menu->getReviews($reviews);
           <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/php/review.png" class='icon-review'>
           <h4>レビュー一覧</h4>
         </div>
+        <!--レビューを表示する-->
         <?php foreach($menuReviews as $review): ?>
+          <!--関連したレビューだけを表示したい-->
+          <!--それぞれのReviewインスタンスに紐付いているUserインスタンスを取得-->
           <!-- $reviewに対して、引数を$usersとしてgetUserメソッドを呼び出して、戻り値を変数$userに代入してください -->
           <?php $user = $review->getUser($users) ?>
           <div class="review-list-item">

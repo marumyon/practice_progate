@@ -4,6 +4,10 @@
 //PHP_EOLは改行を表す
 // echo 'Hello World' . PHP_EOL;
 //コマンドプロンプトでディレクトリに移動して「code .」でvscodeが開く
+// ブラウザで表示するには、ターミナルで「php -S localhost:8000」で表示して、/ファイル名で直接URLに入力する
+// 変数を確認するときに使える
+// var_dump($this->name);
+// exit ;
 
 //だーよこの問題
 // if ($dyce === 1 || $dyce === 2) {
@@ -31,11 +35,6 @@
 //         break;
 //      }
 
-// ブラウザで表示するには、ターミナルで「php -S localhost:8000」で表示して、ファイル名を直接URLに入力する
-// 変数を確認するとき使える
-// var_dump($i);
-// exit ;
-
 //3の倍数と3のつく数字の時だけ画像を表示させる
 // for ($i = 1; $i <= 40; $i++) {
 //     if ($i % 3 === 0) {
@@ -50,14 +49,14 @@
 // }
 
 //1の段から9の段までforeachを2回使って掛け算の表示(～9/9)
-$scores = array(1, 2, 3, 4, 5, 6, 7, 8, 9) ;
-$scores2 = array(1, 2, 3, 4, 5, 6, 7, 8, 9) ;
- foreach ($scores as $score) {
-     foreach ($scores2 as $score2) {
-   echo $score . '×' . $score2 . '=' . $score * $score2 ;
-   echo '<br>';
-     }
- }
+// $scores = array(1, 2, 3, 4, 5, 6, 7, 8, 9) ;
+// $scores2 = array(1, 2, 3, 4, 5, 6, 7, 8, 9) ;
+//  foreach ($scores as $score) {
+//      foreach ($scores2 as $score2) {
+//    echo $score . '×' . $score2 . '=' . $score * $score2 ;
+//    echo '<br>';
+//      }
+//  }
 
 // for($a = 1; $a <=9; $a++){
 //     for($i = 1; $i <= 9; $i++){
@@ -77,6 +76,46 @@ $scores2 = array(1, 2, 3, 4, 5, 6, 7, 8, 9) ;
 //         echo "<br>" ;
 //     }    
 //  }
+
+//課題(10/13)
+// 1から100までの数字を画面に表示する。
+// ただし、3の倍数のときは数字の代わりにFizzと表示し、
+// 5の倍数のときは数字の代わりにBuzzと表示し、
+// 15の倍数のときは数字の代わりにFizzBuzzと表示する
+//15は3の倍数でも5の倍数でもあるのでFizzBuzzを表示したいときは
+//一番上に持ってくる
+for ($i = 1; $i <= 100; $i++) {
+    if($i % 15 == 0){
+      echo 'FizzBuzz';
+      echo '<br>';
+     }
+    elseif($i % 3 == 0){
+       echo 'Fizz';
+       echo '<br>';
+    }
+    elseif($i % 5 == 0){
+      echo 'Buzz';
+      echo '<br>';
+    }
+    else{
+      echo $i;
+      echo '<br>';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>   
  

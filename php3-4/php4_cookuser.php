@@ -1,6 +1,8 @@
 <?php
 class User {
+  //レビューするひと、一人ひとりをオブジェクトとみなす
   // $idというprivateなプロパティを定義してください
+  //同性同名に対応できるようidという番号をふる
   private $id;
   private $name;
   private $gender;

@@ -4,14 +4,21 @@ class Menu {
   protected $price;
   protected $image;
   private $orderCount = 0;
-  // クラスプロパティ$countのアクセス権をprivateに、初期値を数値の0にしてください
+  //インスタンスの数を数えたいときは、クラス全体で管理するので、
+  //クラスプロパティを使用する
+  //staticをつける
+  //クラス名::$クラスプロパティ名でアクセスできる
+  //親クラスのprivateには子クラスからもアクセスできないので、
+  //protectedで継承している子クラスのみからアクセスできる
   protected static $count = 0;
   
   public function __construct($name, $price, $image) {
     $this->name = $name;
     $this->price = $price;
     $this->image = $image;
-     // クラスプロパティcountの値に1を足してください
+     //クラス内でクラスプロパティにアクセスするときはselfをつける
+     //self::$クラスプロパティ名
+     //インスタンスが生成される度にcountの値に1を足す
      self::$count++;
   }
   
@@ -42,27 +49,36 @@ class Menu {
   public function getTotalPrice() {
     return $this->getTaxIncludedPrice() * $this->orderCount;
   }
-
+  
+  //特定のレビューだけを表示したい
   // getReviewsメソッドを定義してください
   public function getReviews($reviews) {
+    //空の配列を設定する
     $reviewsForMenu = array();
     foreach ($reviews as $review) {
+      //$reviewのmenuNameプロパティと、インスタンス自身($this)のnameプロパティを比較する
       if ($review->getMenuName() == $this->name) {
+        //上記の比較がtrueであるなら、$reviewsForMenuに$reviewを追加する
         $reviewsForMenu[] = $review;
       }
     }
+    //foreach文が終了した後、$reviewsForMenuをreturnする
     return $reviewsForMenu;
   }
 
-   // getCountというクラスメソッドを追加してください
+   //個々のインスタンスのデータに関係ない処理を行いたい時には「クラスメソッド」を使用する
+   //呼び出しはクラス名::クラスメソッド名
    public static function getCount() {
     return self::$count;
   }
 
-    // findByNameというクラスメソッドを定義してください
+    
     public static function findByName($menus, $name) {
+      //$menusの各要素を変数$menuとする
       foreach ($menus as $menu) {
+        //$menuのnameプロパティと引数の$nameを比較
         if ($menu->getName() == $name) {
+          //同じ値ならその$menuをreturn
           return $menu;
         }
       }
